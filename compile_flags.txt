@@ -1,0 +1,5 @@
+-O2
+-Wall
+-g
+-I/Users/sharp/workspace/linux-5.10.153/include
+-I/Users/sharp/workspace/linux-5.10.153/uapi/include
