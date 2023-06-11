@@ -4,7 +4,7 @@ The linux kernel module for HTTP static file service.
 
 ## Description
 
-Loaded in the kernel to provide HTTP static file service, support keepalive and files list,
+Loaded in the kernel to provide HTTP static file service, support keep-alive and files list.
 
 List of files:
 
