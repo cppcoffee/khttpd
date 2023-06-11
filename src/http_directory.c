@@ -4,11 +4,6 @@
 #include <linux/dirent.h>
 
 #include "khttpd.h"
-#include "socket.h"
-#include "http_directory.h"
-#include "http_chunk.h"
-#include "http_request.h"
-#include "http_response.h"
 
 #define HTML_HEAD_BEGIN "<html><head>"
 #define HTML_TITLE_BEGIN "<title>Directory listing for "
