@@ -29,7 +29,7 @@ it is now listening to `0.0.0.0:8000` and can send requests.
 Sending http request file:
 
 ```shell
-$ curl http://127.0.0.1:8000/src/http_request.c -voa
+$ curl http://10.211.55.4:8000/src/http_request.c -voa
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 10.211.55.4:8000...
