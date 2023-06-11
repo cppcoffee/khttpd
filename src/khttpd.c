@@ -82,10 +82,15 @@ fail:
 	return err;
 }
 
-static int path_is_directory(const char *p)
+static int check_root_path(const char *p)
 {
 	int rc, mode;
 	struct path path_struct;
+
+	if (*p != '/') {
+		DEBUG_PRINT(KERN_INFO, "Not absolute path: %s\n", p);
+		return -1;
+	}
 
 	rc = kern_path(p, LOOKUP_FOLLOW, &path_struct);
 	if (rc != 0) {
@@ -108,7 +113,7 @@ static int __init khttpd_init(void)
 {
 	int err;
 
-	if (path_is_directory(root_dir) != 0) {
+	if (check_root_path(root_dir) != 0) {
 		return -1;
 	}
 
