@@ -146,9 +146,9 @@ static int __init khttpd_init(void)
 
 static void __exit khttpd_exit(void)
 {
-	http_daemon_stop();
-
 	socket_close(listen_socket);
+
+	http_daemon_stop();
 
 	pr_info("khttpd unloaded\n");
 }
