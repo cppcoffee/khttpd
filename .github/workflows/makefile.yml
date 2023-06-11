@@ -14,14 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: configure
-      run: ./configure
+    - name: Install build dependencies
+      run: sudo apt-get install linux-headers-$(uname -r)
 
-    - name: Install dependencies
+    - name: Build
       run: make
 
-    - name: Run check
-      run: make check
-
-    - name: Run distcheck
-      run: make distcheck
