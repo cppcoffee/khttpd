@@ -88,19 +88,19 @@ static int check_root_path(const char *p)
 	struct path path_struct;
 
 	if (*p != '/') {
-		DEBUG_PRINT(KERN_INFO, "Not absolute path: %s\n", p);
+		pr_err("Not absolute path: %s\n", p);
 		return -1;
 	}
 
 	rc = kern_path(p, LOOKUP_FOLLOW, &path_struct);
 	if (rc != 0) {
-		DEBUG_PRINT(KERN_INFO, "Not found path: %s, err(%d)\n", p, rc);
+		pr_err("Not found path: %s, err(%d)\n", p, rc);
 		return -1;
 	}
 
 	mode = d_inode(path_struct.dentry)->i_mode;
 	if (!S_ISDIR(mode)) {
-		DEBUG_PRINT(KERN_WARN, "Path not a directory: %s\n", p);
+		pr_err("Path not a directory: %s\n", p);
 		return -1;
 	}
 
