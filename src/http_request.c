@@ -6,11 +6,6 @@
 
 #include "khttpd.h"
 #include "daemon.h"
-#include "socket.h"
-#include "http_parser.h"
-#include "http_request.h"
-#include "http_response.h"
-#include "http_directory.h"
 
 #define RECV_BUFFER_SIZE 4096
 

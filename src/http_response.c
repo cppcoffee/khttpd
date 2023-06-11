@@ -2,8 +2,6 @@
 #include <linux/fs.h>
 
 #include "khttpd.h"
-#include "socket.h"
-#include "http_response.h"
 
 #define READ_BUFFER_SIZE 8192
 

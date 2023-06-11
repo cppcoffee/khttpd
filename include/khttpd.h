@@ -1,7 +1,12 @@
 #ifndef _KHTTPD_H_
 #define _KHTTPD_H_
 
+#include "socket.h"
 #include "http_string.h"
+#include "http_request.h"
+#include "http_chunk.h"
+#include "http_response.h"
+#include "http_directory.h"
 
 #ifdef DEBUG
 #define DEBUG_PRINT(fmt, args...) printk(KERN_DEBUG fmt, ##args)
@@ -16,6 +21,7 @@
 #define VERSION "0.0.1"
 #define SERVER_NAME MODULE_NAME "/" VERSION
 
+// Parameter default values
 #define DEFAULT_LISTEN_ADDR "0.0.0.0"
 #define DEFAULT_PORT 8000
 #define DEFAULT_BACKLOG 1024
