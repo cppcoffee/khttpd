@@ -41,7 +41,6 @@ static int accept_handler(void *arg)
 			continue;
 		}
 
-		// TODO: use mempool
 		worker->max_path_length = PATH_MAX;
 
 		worker->absolute_path.data =
@@ -67,7 +66,6 @@ static int accept_handler(void *arg)
 
 void free_worker(struct http_worker *worker)
 {
-	// TODO: use mempool
 	kfree(worker->absolute_path.data);
 
 	sock_release(worker->socket);
