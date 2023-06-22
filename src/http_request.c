@@ -31,7 +31,6 @@ void http_request_handler(struct work_struct *ctx)
 	int i, n, rc;
 	char *buf;
 
-	// TODO: use mempool
 	buf = kmalloc(RECV_BUFFER_SIZE, GFP_KERNEL);
 	if (buf == NULL) {
 		pr_err("kmalloc error, no memory\n");
